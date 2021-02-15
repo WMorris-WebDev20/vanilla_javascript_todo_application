@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-size: 1.5rem;
+}
+header{
+    grid-column: 1/-1;
+    grid-row: 1;
+    display: flex;
+    font-size: .45rem;
+    font-family: 'Press Start 2P', cursive; 
+    box-shadow: 2px 3px 10px 4px rgba(107, 107, 107, 0.788);     
+    background-color: rgba(146, 146, 146, 0.788);
+}
+h1{
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    font-size: 4rem;
+    margin: 0 auto 0 5%;
+}
+p{
+    margin: 1.25rem 0;
+}
+main{
+    grid-column: 2/6;
+    grid-row: 2;    
+}
+
+i{
+    color: red;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+footer{
+    grid-column: 1/-1;
+    grid-row: 3;
+    padding: .5rem 0 .5rem 0;
+    text-align: center;    
+    font-weight: bold;    
+    box-shadow: 2px 3px 10px 4px rgba(107, 107, 107, 0.788);     
+    background-color: rgba(146, 146, 146, 0.788);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#todoUL div {
+    display: grid;
+}
+#todoUL button{
+    grid-column: 1/-1;
+    grid-row: 3;
+    margin-left: auto;
+    width: 10%;
+}
+.fa-pencil-alt{
+    color: rgb(208, 211, 65);
+}
+.formContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    min-height: 100%;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+}
+.formDiv{
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem 20%;
+    border: 1px solid grey;
+}
+.formDiv div{
+    width: 100%;
+    margin: 1rem 0;
+}
+.formDiv input{
+    height: 3vh;
+    width:90%;
+    border: 1px solid rgba(122, 121, 121, 0.596);
+    margin-top: .5rem;        
+}
+.formDiv button{
+    margin: .5rem auto;
+    width: 15%;
+    height: 2.5vh;
+}
+
+.formResultDiv{
+    display: flex;
+    margin: 1vh 20%;
+    padding: .5rem;    
+    align-items: center;
+    border-left: 2px solid rgba(0, 110, 255, 0.616);
+    box-shadow: 1px 1px 5px 1px rgb(148, 148, 147); 
+}
+
+.toDoTitle{
+    grid-column: 1/-1;
+    grid-row: 1;
+}
+.toDoDiscript{
+    grid-column: 1/-1;
+    grid-row: 2;
+}   
+.checkMe{
+    grid-column: 1/-1;
+    grid-row: 3;
+    margin-right: auto;
+}
+.labelCheck{
+    grid-column: 1/-1;
+    grid-row: 3;
+    margin:  0 auto 0 1.5rem ;
+    font-size: 1rem;
+} 
+@media only screen and (min-width: 300px)and (max-width:501px){
+    h1{
+        font-size: 2.2rem;
+    }
+    main{
+        grid-column: 1/-1;
+        margin: 0 5%;
+    }
+    li{
+        font-size: 1.25rem;
+    }
+    .formDiv{
+        margin: .75rem 0 ;       
+    }
+    #todoUL div {
+        display: grid;
+    }
+    #todoUL button{
+        grid-column: 1/-1;
+        grid-row: 3;
+        width: 25%;
+    }  
+    .checkMe{
+        margin-left: 54%;        
+    }
+    .labelCheck{
+        margin: 0 .25rem 0 60% ;
+    }
+    .formResultDiv{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);        
+        margin: 1vh 0;
+        padding: .25rem ;       
+    }
+    .formDiv button {
+        margin:  .5rem 0;
+        height: 5vh;
+        width: 50%;
+    }
+    .formDiv input{
+        height: 5vh;
+        width: 90%;
+        padding: 0;        
+    }
+    .toDoTitle{
+        grid-column: 1/-1;
+        grid-row: 1;
+    }
+    .toDoDiscript{
+        grid-column: 1/-1;
+        grid-row: 2;
+    }    
+    
+}
+@media only screen and (min-width: 502px)and (max-width:768px){
+    
+    main{
+        grid-column: 1/-1;
+        margin: 0 5%;
+    }
+    li{
+        font-size: 1.25rem;
+    }
+    .formDiv{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;              
+    }
+    .formDiv button {
+        margin:  .5rem 0;        
+    }
+    .formDiv input{
+        height: 5vh;
+        width: 90%;
+        padding: 0;        
+    }
+    .formResultDiv{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);        
+        margin: 1vh 0;        
+    }    
+    #todoUL div {
+        display: grid;
+    }
+    #todoUL button{
+        grid-column: 3/4;
+        grid-row: 3;
+        margin-left: auto;
+        width: 30%;
+    }
+    .toDoTitle{
+        grid-column: 1/-1;
+        grid-row: 1;
+    }
+    .toDoDiscript{
+        grid-column: 1/-1;
+        grid-row: 2;
+    } 
+}
